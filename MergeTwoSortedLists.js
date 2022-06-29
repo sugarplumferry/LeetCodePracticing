@@ -1,13 +1,12 @@
+function ListNode(val, next) {
+	this.val = val === undefined ? 0 : val;
+	this.next = next === undefined ? null : next;
+}
 /**
  * @param {ListNode} list1
  * @param {ListNode} list2
  * @return {ListNode}
  */
-function ListNode(val, next) {
-	this.val = val === undefined ? 0 : val;
-	this.next = next === undefined ? null : next;
-}
-
 var mergeTwoLists = function (list1, list2) {
 	let head = new ListNode();
 	let result = head;
@@ -27,7 +26,7 @@ var mergeTwoLists = function (list1, list2) {
 	return result.next;
 };
 
-var GenerateLinkedList = function (array) {
+function GenerateLinkedList(array) {
 	let list = new ListNode();
 	let head = list;
 	for (let i = 0; i < array.length; i++) {
@@ -36,7 +35,7 @@ var GenerateLinkedList = function (array) {
 		list = list.next;
 	}
 	return head;
-};
+}
 
 let list1 = GenerateLinkedList([1, 2, 4]),
 	list2 = GenerateLinkedList([1, 3, 4]);
