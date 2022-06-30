@@ -31,8 +31,10 @@ function GenerateLinkedList(array) {
 	let head = list;
 	for (let i = 0; i < array.length; i++) {
 		list.val = array[i];
-		list.next = new ListNode();
-		list = list.next;
+		if (i != array.length - 1) {
+			list.next = new ListNode();
+			list = list.next;
+		}
 	}
 	return head;
 }
